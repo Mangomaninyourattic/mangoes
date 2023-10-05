@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangoes Survey Form</title>
+    <style>
+        /* =============== Body Styles =============== */
+body {
+    background-color: rgb(218, 165, 32);
+    font-family: sans-serif;
+    padding: 20px;
+    border: 10px double;
+}
+/* =============== Heading Styles =============== */
+h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family:serif;
+}
+/* =============== Description Styles =============== */
+#description {
+    text-align: center;
+    color: black;
+}
+/* =============== Paragraph Styles =============== */
+p {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    font-family:serif;
+}
+/* =============== Container Styles =============== */
+.container {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.548);
+    border: 10px double;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 600px;
+    font-family:serif;
+}
+/* =============== Form Styles =============== */
+.form, .pick, .choice, .submit-button, .memories {
+    color: black;
+}
+.form {
+    margin: 10px;
+    width: 100%;
+    min-height: 2em;
+}
+/* =============== Submit Button Styles =============== */
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: black;
+    min-width: 300px;
+    font-family:serif;   
+}
+/* =============== File Input Styles =============== */
+input[type="file"] {
+    padding: 1px 2px;
+}
+/* =============== Label and Textarea Styles =============== */
+label, textarea {
+    display: block;
+    margin: 0.5rem 0;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Mangoes Survey Form</h1>
+            <p id="description">Some Questions about Mangoes</p>
+        </header>
+    <form id="survey-form">
+        <div class="form fill"><label for="name">Enter Your Name: <input id="name" name="name-label" type="text" required /></label></div>
+        <div class="form fill"><label for="email">Enter Your Email: <input id="email" name="email-label" type="email" required /></label></div>
+        <div class="form fill"><label for="age">Input your age (years): <input id="age" type="number" name="number-label" min="13" max="120" /></label></div>
+        <div class="form fill">
+            <label for="dishes-and-drinks">How do you eat/ drink Mangoes?
+                <select id="dishes-and-drinks" name="dishes-and-drinks">
+                    <option value="">(select one)</option>
+                    <option value="1">Mango Smoothie</option>
+                    <option value="2">Grilled Mango Skewers</option>
+                    <option value="3">Mango Kulfi</option>
+                    <option value="4">Mango in Salads and Lunch</option>
+                    <option value="5">Other</option>
+                </select>
+            </label>
+        </div>
+    <div class="form">
+        <section> <p>Which variety of Mangoes do you like?</p>
+            <div class="choice"><label for="Alphonso"><input id="Alphonso" type="radio" name="Alphonso" class="inline" /> Alphonso (Hapus) </label></div>
+            <div class="choice"><label for="Tommy"><input id="Tommy" type="radio" name="Tommy" class="inline" /> Tommy Atkins </label></div>
+            <div class="choice"><label for="Kent"><input id="Kent" type="radio" name="Kent" class="inline" /> Kent </label></div>
+            <div class="choice"><label for="Ataulfo"><input id="Ataulfo" type="radio" name="Ataulfo" class="inline" /> Ataulfo </label></div>
+            <div class="choice"><label for="Chaunsa"><input id="Chaunsa" type="radio" name="Chaunsa" class="inline" /> Chaunsa </label></div>
+    </section>
+    </div>
+    <section> <p>Which Benefits of Mangoes are your Favourite?</p>
+        <div class="pick"><label for="nutrients"><input id="nutrients" type="checkbox" name="nutrients" class="inline" /> Packed with nutrients </label></div>
+        <div class="pick"><label for="calories"><input id="calories" type="checkbox" name="calories" class="inline" />  Low in calories </label></div>
+        <div class="pick"><label for="diabetes"><input id="diabetes" type="checkbox" name="diabetes" class="inline" /> May help prevent diabetes </label></div>
+        <div class="pick"><label for="compounds"><input id="compounds" type="checkbox" name="compounds" class="inline" /> High in healthy plant compounds </label></div>
+        <div class="pick"><label for="immune-boosting"><input id="immune-boosting" type="checkbox" name="immune-boosting" class="inline" /> Contains immune-boosting nutrients </label></div>
+        <div class="pick"><label for="Versatile"><input id="Versatile" type="checkbox" name="Versatile" class="inline" /> Versatile and easy to add to your diet </label></div>
+    </section>
+    <div class="form">
+        <p>Do you have any specific memories or traditions associated with eating mangoes?</p>
+        <textarea id="memories" class="memories" name="bio" rows="9" cols="40" placeholder="Eating mangoes with my grandma..."></textarea>
+    </div>
+    <div class="form">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>
